@@ -1,0 +1,57 @@
+# Network Scan Analysis Report
+
+## Objective
+
+To identify active hosts and open ports in the local network using Nmap.
+
+## Network Range
+
+10.0.2.0/24
+
+## Hosts Found
+
+### Host 1
+
+IP Address: 10.0.2.1
+
+Open Ports:
+
+* 135/tcp (MSRPC)
+* 445/tcp (Microsoft-DS / SMB)
+* 902/tcp (ISS RealSecure)
+* 912/tcp (Apex Mesh)
+* 16992/tcp (Intel AMT SOAP HTTP)
+
+### Host 2
+
+IP Address: 10.0.2.2
+
+No open ports detected.
+
+### Host 3
+
+IP Address: 10.0.2.15
+
+No open ports detected.
+
+## Security Risks
+
+### Port 135
+
+Remote Procedure Call service may be targeted for exploitation.
+
+### Port 445
+
+SMB service may expose file-sharing functionality and can be targeted by malware or unauthorized access attempts.
+
+### Port 902
+
+Virtualization-related services should be restricted to trusted networks.
+
+### Port 16992
+
+Remote management interfaces can increase attack surface if not secured properly.
+
+## Conclusion
+
+The scan identified one active host exposing multiple services. Proper firewall rules and secure configurations are recommended to reduce security risks.
